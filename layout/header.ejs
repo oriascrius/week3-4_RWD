@@ -1,0 +1,31 @@
+<header class="bg-primary">
+  <div class="container sm:container-sm sm:px-[13px] md:px-9">
+    <nav class="sm:flex sm:items-center"><!-- row -->
+      <div class="pl-[15px] py-4 sm:pl-0 sm:py-0"><!-- col -->
+        <!-- logo -->
+        <!-- 查了資料，圖片內容的 alt 比較可以增加 seo 搜尋，但這邊 div 感覺不如改成 h1 ? -->
+        <h1 class="w-20 h-full hover-translate-y">
+          <a href="./index.html">
+            <img src="../assets/images/logo-white.png" alt="logo" />
+          </a>
+        </h1>
+      </div>
+      <!-- 導覽 -->
+       <!-- block 讓縮小視窗後放大點擊 a 連結，但會出現x軸，我在父容器添加 overflow-hidden，不知可不可行 -->
+      <ul class=" flex flex-wrap text-white sm:flex-nowrap sm:ml-auto overflow-hidden"><!-- col -->
+        <li class="nav-item">
+          <a href="./product_01.html" class="nav-link">系列鏡框</a>
+        </li>
+        <li class="nav-item">
+          <a href="./store.html" class="nav-link">門市據點</a>
+        </li>
+        <li class="nav-item">
+          <a href="./product_01.html" class="nav-link">部落格</a>
+        </li>
+        <li class="nav-item">
+          <a href="./store.html" class="nav-link">常見問題</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

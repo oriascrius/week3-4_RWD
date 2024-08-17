@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="zh-hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>眼鏡官網</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet" />
+  <!-- 如果用 JS 引入，畫面跳轉會先讀不到 CSS 的問題 -->
+  
+  <script type="module" crossorigin src="/week3-4_RWD/assets/main-a5bd4fcb.js"></script>
+  <link rel="stylesheet" href="/week3-4_RWD/assets/main-a293edbf.css">
+</head>
+
+<body>
+  <header class="bg-primary">
+  <div class="container sm:container-sm sm:px-[13px] md:px-9">
+    <!-- sm:px-[23px] md:px-0，因為 header (外框)是 sm:px-[13px] md:px-9 -->
+    <!-- 但 sm 以下時，下方 ul 導覽會左右 px-[13px] 有空隙，所以這裡單純覆蓋外框的 sm:px-[13px] md:px-9 控制作 padding -->
+    <!-- sm 以上 36 padding， sm 以下 13 padding，36 - 13= 23px -->
+    <nav class="sm:flex sm:items-center sm:px-[23px] md:px-0"><!-- row -->
+      <!-- 同上因為外框 sm:px-[13px] md:px-9，所以覆蓋樣式控制  -->
+      <div class="py-4 sm:py-0 ps-[13px] sm:ps-0"><!-- col -->
+        <!-- logo -->
+        <!-- 1. 查了資料，圖片內容的 alt 比較可以增加 seo 搜尋，但這邊 div 感覺不如改成 h1 ? -->
+        <h1 class="w-20 h-full hover-translate-y md:ps-0">
+          <a href="./index.html">
+            <img src="/week3-4_RWD/assets/logo-white-5423463a.png" alt="logo" />
+          </a>
+        </h1>
+      </div>
+      <!-- 導覽 -->
+      <!-- block 讓縮小視窗後放大點擊 a 連結，但會出現x軸，我在父容器添加 overflow-hidden，不知可不可行 -->
+      <ul class=" flex flex-wrap sm:gap-16 text-white sm:flex-nowrap sm:ml-auto overflow-hidden"><!-- col -->
+        <li class="nav-item">
+          <a href="./product_01.html" class="nav-link">系列鏡框</a>
+        </li>
+        <li class="nav-item">
+          <a href="./store.html" class="nav-link">門市據點</a>
+        </li>
+        <li class="nav-item">
+          <a href="./blog.html" class="nav-link">部落格</a>
+        </li>
+        <li class="nav-item">
+          <a href="./faq.html" class="nav-link">常見問題</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>    <!-- banner -->
+    <section class="h-[396px] md:h-[768px] bg-sm-banner md:bg-banner bg-cover bg-center">
+      <!-- 外層容器有設定高度，內層都要撐滿 h-full 才能控制文字 -->
+      <div class="container sm:container-sm h-full px-[13px] md:px-9">
+        <div class="h-full">
+          <ul class="flex h-full flex-col items-end justify-center">
+            <li>
+              <p class="text-primary-Dark md:text-[36px]">
+                Promise-Desert 2020 早春系列
+              </p>
+            </li>
+            <li>
+              <h2 class="text-primary-Dark text-[24px] md:text-[64px] font-bold">
+                看得清，才能看得遠
+              </h2>
+            </li>
+            <li class="mt-[14px]">
+              <a href="../product_01.html"
+                class="text-white bg-primary font-medium pb-2 text-[20px] py-[6px] px-3 block hover-translate-y hover:opacity-75">
+                立即購買
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- 用專業的心，做專業的事 -->
+    <section class="bg-secondary py-10 md:py-20">
+      <div class="container sm:container-sm text-primary-Dark px-[13px] md:px-9">
+        <h2 class="text-[24px] sm:text-[48px] px-13 sm:text-5xl font-bold pb-8 text-center">
+          用專業的心，做專業的事
+        </h2>
+        <!-- 外層 margin 拉回來，不清楚就讓內外層加上框線就可以知道差別 -->
+        <ul class="flex flex-wrap lg:flex-nowrap -mx-3 space-y-8 md:space-y-0">
+          <!-- 每個卡片都距離 12px，外層要用 margin 拉回來-->
+          <li class="flex flex-col items-center w-full md:w-1/2 px-3">
+            <div class="">
+              <img src="data:image/png;base64,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" alt="money" />
+            </div>
+            <h3 class="text-[24px] font-bold">單一價格</h3>
+            <p class="text-[#000000] ">無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。</p>
+          </li>
+          <li class="flex flex-col items-center w-full md:w-1/2 px-3">
+            <div class="">
+              <img src="data:image/png;base64,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" alt="time" />
+            </div>
+            <h3 class="text-[24px] font-bold">20 分鐘即可取件</h3>
+            <p class="text-[#000000] ">
+              為了您的寶貴時間著想，以豐富專業知識與技術將結帳到交件的時間縮減至最快
+              20 分鐘即可完成。
+            </p>
+          </li>
+          <li class="flex flex-col items-center w-full md:w-1/2 px-3">
+            <div class="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAC4lBMVEUAAABbAABiAABkAwBkAgBlAwBkAwBkAgBlAgBlAgBlAwBlAgBlAgBkAgBkAgBlAwBkAgBjAgBkAABpAABjAABlAABlAgBlAgBkAgBlAwBkAwBkAgBlAwBkAABiAABkAABmAgBkAgBkAgBlAgBkAwBmAABhAABkAwBkAgBkAgBlAgBkAgBjAABmAABkAgBkAgBkAwBlAgBlAABjAABkAgBlAgBiAABmAABlAgBmAABlAgBlAgBjAgBqAABlAgBlAgBlAgBiAABmAABkAgBkAgBkAgBkAgBlAgBkAgBkAABhAABlAgBlAgBjAwBeAABkAgBlAgBlAgBmAABlAABkAwBkAgBlAwBlAgBkAwBkAABlAgBlAgBmAABlAABkAwBlAABjAwBlAgBlAgBmAABlAgBVAABlAwBjAABlAABmAABlAgBjAABmAABkAgBkAgBlAABkAABjAABlAgBjAABlAABkAgBlAgBkAgBlAABkAgBlAgBkAwBkAgBiAABmAABkAwBlAgBjAABhAABlAwBlAgBkAgBkAwBkAABkAABkAgBmAgBlAAAAAABlAgBkAgBkAABgAABiAABkAgBgAABlAwBkAgBkAABlAwBkAwBmAABkAgBkAABkAgBlAgBjAABlAwBlAgBVAABmAABkAwBlAgBgAABkAgBkAgBlAwBkAgBlAgBlAgBkAwBlAgBlAwBkAgBkAgBkAwBkAwBlAABjAABkAgBlAgBlAwBlAwBjAABdAABkAABlAgBkAgBlAwBjAwBlAgBlAgCAAABkAgBlAwBmAABkAgBkAgBtAABkAgBkAgBlAABlAABkAwBlAgBjAABkAgBlAgBoAABkAwBkAgBlAwBlAwBlAgBkAgBlAgBkAgBAAABjAABkAgBkAgBkAABkAwBoAABVAABlAgBkAgBlAwBlAwBkAABoAABiAABgAABkAwBlAwBlAgBkAgBkAgBlAgBjAwBkAgBlAgBkAgBlAgDPQDuBAAAA9nRSTlMADjljjLbL2Obz//Xp3dHDo3FCERJEdKTlyrWKYjgNLmeh4qlhFBWt49afZiw3kujHfisxgo40D98Kzdp2DIjxkyIomfTteIOXFx3ud1UTj/jcRia/7F1tsBxq9hlRt0xf8KIylQmsJDoe1EtB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" alt="love" />
+            </div>
+            <h3 class="text-[24px] font-bold">安心售後服務</h3>
+            <p class="text-[#000000] ">
+              我們提供長達 120
+              天的保固售後服務，不限會員資格皆享有免費深層保養及專業維修服務。
+            </p>
+          </li>
+          <li class="flex flex-col items-center w-full md:w-1/2 px-3">
+            <div class="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAV1BMVEUAAABlAABjAwBkAgBlAwBkAwBkAgBlAwBlAgBlAgBlAABkAgBlAgBkAABoAABlAgBgAABkAABjAABlAwBkAgBkAgBlAwBlAgBkAgBkAwBlAgBkAgBlAgCl0rvaAAAAHXRSTlMAP19/r7/v/8+fMI9vTyDfEEBQYHDgwPCgsJCA0ECzS0YAAAUESURBVHgB7MHBAQMQFAUw+j2w/8C1QI+9JWkAAAAAAAAAAADwE/1TI5nr2cmpftvf3F4n2euZyagv9fa2nDqvAwBYbYMFBhI5TmKH5P2fc6/VmXWlCNnCs3/4LjuMWh18SId8f7VK4npGznU3D835W+eQO19fTubeocxdfdMsrg5l3R3M+otDxXAjaIJuAyrcpQeL0GEJ90MN0vhxWOISoJY/oa5RKsRnSnTylaGxhvuGF3w7rHElU2h7oeytV7gRylCH9VwEkxsaXAgK+AFNOh7dXjPF4EEVkbNHt9dMEe2t1jlfmYdDuxs8dUGdcRkyo8NXXOx52Dtun2FbJhd8mYdCAXXWTCZ8nfPW9WEw2Xo9L7+SkkkPBXolj7T8mi2T7FE25+jhHwrTirIzFDijbJ0CwT8+5rlukmlAQcoemCjn8gDVQ84iAuNzQsHAT+FOakYkYToyCkZQjCjIwlzSNGsLXlkgaQNZL3TFETxFTuhGD7ItFVWNXEFoLsx4JMNTGY/MATi9bI4KhnYCDR1HD/UnyEqgmfQl6fFA8lBgqt65zkLNdD5pO9cJud2/cNWIls/r/I7c6XmzdwKwZzKAaJDz0NH+dJBXw1wpmUT7h/XpkvaWXhk81aa0RGnIBhU8cr28HU5QZZH7rW9ZC1SZ5JY4vhdCHUpScP0MSQR1+EJw0oUh9VBpkoLrh3qESn0SjvdVGVrjcMWypb5AtU2YIH5ZgHpBCK6ORYB6/GJ0/CdEMFiKZsvxhhhMh+V4WFYfN5bs4F6/8tv2lu3o6pPBJBVs4ROfYpN8dLlTKlnsUbBIVv1p0ngqAoRGReKBBmAGpWj25R4gNpqsg9bqH0lglPkGtfEfGa1quYM2ffZ76qb/evs5Nao72wZGnpdk0QfCXKXqVO1zvLBEZrAK9YkEsJpZIo79xKqvT4TAiNXfHfTIrD4RaJYItk1ECbV8aCJsc13fIJH3H625WSK+PpG+WSI7X/6fsf069RxBAqOJ3+P1TxgRXxG5WZUeaqRgv8VrkTJszap0VlcAW0XnZt3f2t1IyXCNR2q1aQXwyu+3P7TvwOzGW6NeNA+QTA8ktsfY3Kj98egJbW0TnLCgILHFbEl/84RNjqmtJAyf463JPRunw+C5xQmFc8ljBA72J3b2WJuMLVGG5lF01mBs0ZAkBO+gFrnjIumz5QhqdULRPDLB3mzlkTnpndMEZLwwuDiQObayireXq0YDSifWhEz36mBhr8y3ebg6ZCb2z23bjYvOyGTlCDDfuCZkErF+23aTC3KhYgrxYtwd2RRTMmci5LGAaDFnIuSRiC9BQyZ0qfyOZkB7JhHlhsgtwR/j+kDM2lbNnAl0Pyg0REkVT2r04NTYTJ/wgAugoBMeiXxyOXczjJW65U2mdxBuDjm+Gj0eOwU9tBabWerfpwlnPJQ8L5PgdK98LSr1oOhT5VtO9xMKonxScY69Bkj3DkUjqEYUdXdiL0I6lGTgaMYn/r6h+Vtp/3Vjb1jWXwIf+MT5evvyv537+0YqPjGT8p2uD8AWyAdnkrwyup8iKFeATxHhCZ8+a64+P5PkQdHv+AH23rDHv6EHFBkTvrU0QiHK+MYyQbmw45vaA9SJM76hOUK9OH9oGlzICd9GygFeENe3yCWtEV7mp3XG/9C8Th6a8eP2x/J/tf0x2nNQ/a89OBAAAAAAEORvPcgVAAAAAAAAAAAAAMBcmHYgr9LxNRIAAAAASUVORK5CYII=" alt="glasse" />
+            </div>
+            <h3 class="text-[24px] font-bold">關於鏡片</h3>
+            <p class="text-[#000000] ">使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 經典系列鏡框 -->
+    <section class="py-10 md:py-20">
+      <div class="container sm:container-sm text-center px-[13px] md:px-9">
+        <h2 class="text-[24px] md:text-[48px] text-primary-Dark font-bold  md:pb-12">經典系列鏡框</h2>
+        <!-- 這邊每個 li 設定寬 1/2 但在 md 時會有兩張圖並排無法垂直單獨一張圖，所以使用 flex-col lg:flex-row 再加上置中解決 -->
+        <ul
+          class="flex flex-wrap flex-col lg:flex-row md:flex-wrap lg:flex-nowrap items-center justify-center text-[48px] text-primary font-black italic -mx-3">
+          <li class="px-3 w-full md:w-1/2 lg:w-1/3">
+            <div class="">
+              <img src="/week3-4_RWD/assets/home-section3-1-bb26ab65.png" alt="OPTICAL">
+            </div>
+            <h3 class="pt-2 ">OPTICAL</h3>
+          </li>
+          <li class="px-3 w-full md:w-1/2 lg:w-1/3">
+            <div class="">
+              <img src="/week3-4_RWD/assets/home-section3-2-38fdd6aa.png" alt="SUNGLASSES">
+            </div>
+            <h3 class="pt-2 ">SUNGLASSES</h3>
+          </li>
+          <li class="px-3 w-full md:w-1/2 lg:w-1/3">
+            <div class="">
+              <img src="/week3-4_RWD/assets/home-section3-3-52db7b9d.png" alt="FUNCTIONAL">
+            </div>
+            <h3 class="pt-2 ">FUNCTIONAL</h3>
+          </li>
+        </ul>
+    </section>
+    <!-- 聯名設計鏡框 -->
+    <section class="py-10 md:py-20 bg-sm-index md:lg-index bg-cover bg-center">
+      <div class="container sm:container-sm text-center px-[13px] md:px-9">
+        <h2 class="text-[24px] md:text-[48px] text-white font-bold  md:pb-12">聯名設計鏡框</h2>
+        <ul
+          class="flex flex-wrap  lg:flex-nowrap items-center justify-center text-[48px] text-primary font-black italic -mx-[13px] gap-6 lg:gap-0">
+          <li class="px-[13px] md:px-0 w-full">
+            <div class="">
+              <img src="/week3-4_RWD/assets/home-section4-1-sm-a801b136.png" class="block sm:hidden" alt="DOUBLE A+">
+              <img src="/week3-4_RWD/assets/home-section4-1-59894574.png" class="hidden sm:block" alt="DOUBLE A+">
+            </div>
+            <div class="bg-white py-2 border">
+              <h3 class="">DOUBLE A+</h3>
+            </div>
+          </li>
+          <li class="px-[13px] md:px-0 w-full ">
+            <div class="">
+              <img src="/week3-4_RWD/assets/home-section4-2-sm-2f57b61a.png" class="block sm:hidden" alt="YOUTH">
+              <img src="/week3-4_RWD/assets/home-section4-2-daaeb8bc.png" class="hidden sm:block" alt="YOUTH">
+            </div>
+            <div class="bg-white py-2 border">
+              <h3 class="">YOUTH</h3>
+            </div>
+          </li>
+        </ul>
+    </section>
+    <!-- 顧客推薦 -->
+    <section class="py-10 md:py-20">
+      <div class="container sm:container-sm text-primary-Dark px-[13px] md:px-9">
+        <h2 class="text-[24px] sm:text-[48px] sm:text-5xl font-bold pb-6 sm:pb-12 text-center">
+          顧客推薦
+        </h2>
+        <!-- flex flex-wrap md:flex-nowrap -->
+        <ul class="flex flex-wrap lg:flex-nowrap -mx-3 gap-4 sm:gap-0">
+          <li class="flex flex-col w-full sm:w-1/2 px-3 md:mb-4 lg:mb-0">
+            <div class="h-full rounded-custom-top">
+              <img src="/week3-4_RWD/assets/home-section5-1-75717951.png" class="h-full w-auto" alt="Jessy" />
+            </div>
+            <div
+              class="flex flex-col p-4 h-full border border-t-0 rounded-custom-bootom border-custom-gray shadow-custom-shadow">
+              <h3 class="text-[16px] font-medium pb-2">Jessy</h3>
+              <p class="text-[#000000] text-[16px]">眼鏡品質優良，下次還會想來這邊購買！</p>
+              <time datetime="2021-06-20" class="text-[#707070] text-[14px] pt-[72px]">2021/06/20</time>
+            </div>
+          </li>
+          <li class="flex flex-col w-full sm:w-1/2 px-3 md:mb-4 lg:mb-0">
+            <div class="h-full rounded-custom-top">
+              <img src="/week3-4_RWD/assets/home-section5-2-bf28c8b7.png" class="h-full w-auto" alt="凱倫" />
+            </div>
+            <div
+              class="flex flex-col p-4 h-full border border-t-0 rounded-custom-bootom border-custom-gray shadow-custom-shadow">
+              <h3 class="text-[16px] font-medium pb-2">凱倫</h3>
+              <p class="text-[#000000] text-[16px]">做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！</p>
+              <time datetime="2021-04-18" class="text-[#707070] text-[14px] pt-[72px]">2021/04/18</time>
+            </div>
+          </li>
+          <li class="flex flex-col w-full sm:w-1/2 px-3">
+            <div class="h-full rounded-custom-top">
+              <img src="/week3-4_RWD/assets/home-section5-3-978a0702.png" class="h-full w-auto" alt="悠悠" />
+            </div>
+            <div
+              class="flex flex-col p-4 h-full border border-t-0 rounded-custom-bootom border-custom-gray shadow-custom-shadow">
+              <h3 class="text-[16px] font-medium pb-2">悠悠</h3>
+              <p class="text-[#000000] text-[16px]">謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
+              <time datetime="2020-12-25" class="text-[#707070] text-[14px] pt-[72px]">2020/12/25</time>
+            </div>
+          </li>
+          <li class="flex flex-col w-full sm:w-1/2 px-3">
+            <div class="h-full rounded-custom-top">
+              <img src="/week3-4_RWD/assets/home-section5-4-cc3480ec.png" class="h-full w-auto" alt="Kyuan" />
+            </div>
+            <div
+              class="flex flex-col p-4 h-full border border-t-0 rounded-custom-bootom border-custom-gray shadow-custom-shadow">
+              <h3 class="text-[16px] font-medium pb-2">Kyuan</h3>
+              <p class="text-[#000000] text-[16px]">服務很好，品質沒有任何問題，非常喜歡。</p>
+              <time datetime="2020-10-31" class="text-[#707070] text-[14px] pt-[72px]">2020/10/31</time>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 聯絡我們 -->
+    <section class="bg-secondary py-10 sm:py-20">
+      <div class="container sm:container-sm px-[13px] w-full sm:w-5/6 lg:w-1/2">
+        <h2 class="text-center text-[24px] sm:text-[48px] font-bold text-primary pb-6">聯絡我們</h2>
+        <p class="pb-6">我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
+        <div class="pb-4">
+          <label for="name" class="pb-2">姓名</label>
+          <input id="name" type="text" name="name" placeholder="陳小明"
+            class="w-full py-[6px] pl-[12px] border border-black bg-transparent" />
+        </div>
+        <div class="pb-4">
+          <label for="phone" class="pb-2">聯絡電話</label>
+          <input id="phone" type="tel" name="phone" placeholder="0912-345-678"
+            class="w-full py-[6px] pl-[12px] border border-black bg-transparent" />
+        </div>
+        <div class="pb-4">
+          <label for="email" class="pb-2">電子郵件</label>
+          <input id="email" type="email" name="email" placeholder="example@email.com"
+            class="w-full py-[6px] pl-[12px] border border-black bg-transparent" />
+        </div>
+        <div class="pb-4">
+          <label for="feedback" class="pb-2">意見反應</label>
+          <textarea id="feedback" type="text" name="feedback" placeholder="請輸入您的意見"
+            class="w-full pt-[6px] pl-[12px] border border-black bg-transparent h-[136px] resize-none"></textarea>
+        </div>
+        <div class="flex pb-6 sm:pb-12">
+          <div>
+            <input type="checkbox" name="agree" id="agree" class=" bg-transparent border border-black mr-1 h-6 w-6  pl-3 pt-[6px]" />
+          </div>
+          <label for="agree">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
+        </div>
+        <div class="pb-10 md:pb-20">
+          <a href="#" class="">
+            <button type="button"
+              class="hover:cursor-pointer block bg-primary py-4 font-bold text-white w-full sm:w-1/2 lg:w-2/3 mx-auto">
+              確認送出
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-primary text-white pt-6 sm:pt-[56px] md:pt-[60px]">
+  <div class="container sm:container-sm px-[13px] sm:px-9">
+    <div class="flex justify-between">
+      <!-- row -->
+      <!-- 導覽 -->
+      <div class="">
+        <!-- 縮小視窗會消失的導覽區塊 -->
+        <ul class="hidden sm:flex sm:gap-12 pb-8">
+          <li>
+            <a href="./index.html" class="block hover-translate-y">首頁</a>
+          </li>
+          <li>
+            <a href="./product_01.html" class="block hover-translate-y"
+              >系列鏡框</a
+            >
+          </li>
+          <li>
+            <a href="./store.html" class="block hover-translate-y">門市據點</a>
+          </li>
+          <li>
+            <a href="./blog.html" class="block hover-translate-y">部落格</a>
+          </li>
+          <li>
+            <a href="./faq.html" class="block hover-translate-y">常見問題</a>
+          </li>
+        </ul>
+        <!-- 連絡電話 -->
+        <div class="flex items-center pb-2 hover-translate-y">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-telephone w-[18px] h-[18px]"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+            />
+          </svg>
+          <p class="ml-[11px]">
+            <a href="tel:0800-000-000">0800-000-000</a>
+          </p>
+        </div>
+        <!-- 連絡信箱 -->
+        <div class="flex items-center pb-6 hover-translate-y">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-envelope w-5 h-4"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+            />
+          </svg>
+          <p class="ml-[10px]">
+            <a href="mailto:glasses&#64;business.com"
+              >glasses&#64;business.com</a
+            >
+          </p>
+        </div>
+      </div>
+      <!-- FB、IG、LINE-->
+      <ul class="flex gap-2 sm:gap-4 md:gap-8">
+        <li>
+          <a href="#" class="block hover-translate-y">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-facebook h-6 w-6"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block hover-translate-y">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-instagram h-6 w-6"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block hover-translate-y">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-line h-6 w-6"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0M5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.15.15 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157m.791-2.924a.156.156 0 0 0-.156.156v3.486c0 .086.07.155.156.155h.562c.086 0 .155-.07.155-.155V4.918a.156.156 0 0 0-.155-.156zm3.863 0a.156.156 0 0 0-.156.156v2.07L7.923 4.832l-.013-.015v-.001l-.01-.01-.003-.003-.011-.009h-.001L7.88 4.79l-.003-.002-.005-.003-.008-.005h-.002l-.003-.002-.01-.004-.004-.002-.01-.003h-.002l-.003-.001-.009-.002h-.006l-.003-.001h-.004l-.002-.001h-.574a.156.156 0 0 0-.156.155v3.486c0 .086.07.155.156.155h.56c.087 0 .157-.07.157-.155v-2.07l1.6 2.16a.2.2 0 0 0 .039.038l.001.001.01.006.004.002.008.004.007.003.005.002.01.003h.003a.2.2 0 0 0 .04.006h.56c.087 0 .157-.07.157-.155V4.918a.156.156 0 0 0-.156-.156zm3.815.717v-.56a.156.156 0 0 0-.155-.157h-2.242a.16.16 0 0 0-.108.044h-.001l-.001.002-.002.003a.16.16 0 0 0-.044.107v3.486c0 .041.017.08.044.107l.002.003.002.002a.16.16 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156Z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Copyright、隱私、服務 -->
+    <ul class="flex flex-col pt-4 sm:pt-8 sm:flex-row gap-2 border-t-2">
+      <li class="">Copyright © 2020 Glasses.All rights reserved.</li>
+      <li class="sm:ml-auto sm:pr-12">
+        <a href="#" class="block hover-translate-y">隱私權政策</a>
+      </li>
+      <li class="pb-6 sm:pb-10 md:pb-8 sm:pr-9 md:pr-0">
+        <a href="#" class="block hover-translate-y">服務條款</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>門市據點</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/tailwind-output.css" />
+  </head>
+
+  <body>
+    <%- include('./layout/header') -%>
+    <!-- 選擇地區 -->
+    <section class="pt-10 sm:pt-20 md:pt-24">
+      <div class="container sm:container-sm px-[13px] sm:px-9">
+        <div>
+          <h2 class="text-[48px] font-bold pl-4 border-l-8 border-[#9F1213]">
+            門市據點
+          </h2>
+        </div>
+        <div class="pt-6 sm:pt-8">
+          <div class="flex">
+            <label
+              for="store-select"
+              class="self-center w-24 sm:w-28 pr-2 sm:pr-4 sm:text-[24px]"
+              >選擇地區</label
+            >
+            <select
+              id="store-select"
+              name="options"
+              class="opacity-75 h-[38px] text-[18px] w-full sm:w-1/2 md:w-1/4 text-[#495057] border border-[#CED4DA] py-[6px] pl-3"
+            >
+              <option value="option1">台北市</option>
+              <option value="option2">台中市</option>
+              <option value="option3">高雄市</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 門市總攬 -->
+    <section class="pt-6 sm:pt-10 pb-16 sm:pb-20">
+      <div class="container sm:container-sm px-[13px] sm:px-9">
+        <ul class="flex flex-wrap -mx-3">
+          <!-- row 包覆所有卡片內容的最外層 -->
+          <li class="w-full sm:w-1/2 md:w-1/3 px-3 pb-6 md:pb-12">
+            <!-- col 單個圖卡 -->
+            <div>
+              <img src="../assets/images/store-1.png" alt="台北中山旗艦店" />
+            </div>
+            <div class="border border-[#00000020] py-2 pl-6 w-full">
+              <h3 class="text-[24px] text-custom-black">台北中山旗艦店</h3>
+            </div>
+            <div
+              class="pl-[26px] pr-6 py-4 gap-2 text-[20px] border border-[#00000020] w-full"
+            >
+              <div class="flex pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-telephone mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                  />
+                </svg>
+                <p>電話：(02)000-1234</p>
+              </div>
+              <div class="flex pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-clock mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"
+                  />
+                  <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"
+                  />
+                </svg>
+                <p>營業時間：10:00-21:00</p>
+              </div>
+              <div class="flex pb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-geo-alt mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+                <p>地址：台北市中山區南京東路25巷2-1號</p>
+              </div>
+            </div>
+            <!-- 詳細資訊 -->
+            <div class="text-center">
+              <a
+                href="./store_dtl.html"
+                class="block bg-[#000000] text-white py-4 text-[19px] cursor-pointer hover:bg-green-300"
+                >詳細資訊</a
+              >
+            </div>
+          </li>
+          <li class="w-full sm:w-1/2 md:w-1/3 px-3 pb-6">
+            <!-- col 單個圖卡 -->
+            <div>
+              <img src="../assets/images/store-2.png" alt="台北綠園店" />
+            </div>
+            <div class="border border-[#00000020] py-2 pl-6 w-full">
+              <h3 class="text-[24px] text-custom-black">台北綠園店</h3>
+            </div>
+            <div
+              class="pl-[26px] pr-6 py-4 gap-2 text-[20px] border border-[#00000020] w-full"
+            >
+              <div class="flex pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-telephone mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                  />
+                </svg>
+                <p>電話：(02)000-2345</p>
+              </div>
+              <div class="flex pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-clock mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"
+                  />
+                  <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"
+                  />
+                </svg>
+                <p>營業時間：10:00-21:00</p>
+              </div>
+              <div class="flex pb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-geo-alt mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+                <p>地址：台北市中正區復興南路 132-1 號</p>
+              </div>
+            </div>
+            <!-- 詳細資訊 -->
+            <div class="text-center">
+              <a
+                href="./store_dtl.html"
+                class="block bg-[#000000] text-white py-4 text-[19px] cursor-pointer hover:bg-green-300"
+                >詳細資訊</a
+              >
+            </div>
+          </li>
+          <li class="w-full sm:w-1/2 md:w-1/3 px-3 pb-6">
+            <!-- col 單個圖卡 -->
+            <div>
+              <img src="../assets/images/store-3.png" alt="台中清水旗艦店" />
+            </div>
+            <div class="border border-[#00000020] py-2 pl-6 w-full">
+              <h3 class="text-[24px] text-custom-black">台中清水旗艦店</h3>
+            </div>
+            <div
+              class="pl-[26px] pr-6 py-4 gap-2 text-[20px] border border-[#00000020] w-full"
+            >
+              <div class="flex pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-telephone mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                  />
+                </svg>
+                <p>電話：(02)000-1234</p>
+              </div>
+              <div class="flex pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-clock mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"
+                  />
+                  <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"
+                  />
+                </svg>
+                <p>營業時間：10:00-21:00</p>
+              </div>
+              <div class="flex pb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-geo-alt mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+                <p>地址：台中市清水區經南一路 23 號 8 樓</p>
+              </div>
+            </div>
+            <!-- 詳細資訊 -->
+            <div class="text-center">
+              <a
+                href="./store_dtl.html"
+                class="block bg-[#000000] text-white py-4 text-[19px] cursor-pointer hover:bg-green-300"
+                >詳細資訊</a
+              >
+            </div>
+          </li>
+          <li class="w-full sm:w-1/2 md:w-1/3 px-3 pb-6">
+            <!-- col 單個圖卡 -->
+            <div>
+              <img src="../assets/images/store-4.png" alt="高雄中正形象店" />
+            </div>
+            <div class="border border-[#00000020] py-2 pl-6 w-full">
+              <h3 class="text-[24px] text-custom-black">高雄中正形象店</h3>
+            </div>
+            <div
+              class="pl-[26px] pr-6 py-4 gap-2 text-[20px] border border-[#00000020] w-full"
+            >
+              <div class="flex pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-telephone mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                  />
+                </svg>
+                <p>電話：(07)000-2345</p>
+              </div>
+              <div class="flex pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-clock mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"
+                  />
+                  <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"
+                  />
+                </svg>
+                <p>營業時間：10:00-21:00</p>
+              </div>
+              <div class="flex pb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-geo-alt mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+                <p>地址：高雄市苓雅區中正路 38 號 12 樓</p>
+              </div>
+            </div>
+            <!-- 詳細資訊 -->
+            <div class="text-center">
+              <a
+                href="./store_dtl.html"
+                class="block bg-[#000000] text-white py-4 text-[19px] cursor-pointer hover:bg-green-300"
+                >詳細資訊</a
+              >
+            </div>
+          </li>
+          <li class="w-full sm:w-1/2 md:w-1/3 px-3">
+            <!-- col 單個圖卡 -->
+            <div>
+              <img src="../assets/images/store-5.png" alt="高雄夢時代店" />
+            </div>
+            <div class="border border-[#00000020] py-2 pl-6 w-full">
+              <h3 class="text-[24px] text-custom-black">高雄夢時代店</h3>
+            </div>
+            <div
+              class="pl-[26px] pr-6 py-4 gap-2 text-[20px] border border-[#00000020] w-full"
+            >
+              <div class="flex pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-telephone mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                  />
+                </svg>
+                <p>電話：(07)000-1234</p>
+              </div>
+              <div class="flex pb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-clock mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"
+                  />
+                  <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"
+                  />
+                </svg>
+                <p>營業時間：10:00-21:00</p>
+              </div>
+              <div class="flex pb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-geo-alt mr-[10px] h-[18px] w-[18px] self-center"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+                <p>地址：高雄市前鎮區中華一路 63 號 6 樓</p>
+              </div>
+            </div>
+            <!-- 詳細資訊 -->
+            <div class="text-center">
+              <a
+                href="./store_dtl.html"
+                class="block bg-[#000000] text-white py-4 text-[19px] cursor-pointer hover:bg-green-300"
+                >詳細資訊</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <%- include('./layout/footer') -%>
+    <!-- <script type="module" src="/src/main.ts"></script> -->
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* 這裡是自定義 container */
+  .container {
+    @apply mx-auto;
+    /* 設計稿 */
+    /* max-width: 1296px; */
+
+    /* md 時，左右 padding 各 32px，1296 + 32 + 32 = 1368px */
+    max-width: 1368px;
+  }
+  .container-sm {
+    @apply container;
+    /* sm 時，左右 padding 各 13px，1296 + 13 + 13 = 1322px */
+    max-width: 1322px;
+  }
+  /* 自定義 hover 效果 向上浮動 */
+  .hover-translate-y {
+    @apply transition-transform duration-300 transform hover:translate-y-[-4px];
+  }
+  /* header li 導覽區塊 */
+  .nav-item {
+    @apply w-1/2 border text-center sm:w-auto sm:border-0 py-3 sm:py-[25px];
+  }
+  /* header 控制 a 連結 導覽區塊 */
+  .nav-link {
+    @apply block hover-translate-y hover:opacity-75;
+  }
+  /* 分頁 */
+  .pagination-link {
+    @apply px-4 py-2 cursor-pointer hover:bg-green-300;
+  }
+}

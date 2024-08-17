@@ -1,0 +1,35 @@
+<header class="bg-primary">
+  <div class="container sm:container-sm sm:px-[13px] md:px-9">
+    <!-- sm:px-[23px] md:px-0，因為 header (外框)是 sm:px-[13px] md:px-9 -->
+    <!-- 但 sm 以下時，下方 ul 導覽會左右 px-[13px] 有空隙，所以這裡單純覆蓋外框的 sm:px-[13px] md:px-9 控制作 padding -->
+    <!-- sm 以上 36 padding， sm 以下 13 padding，36 - 13= 23px -->
+    <nav class="sm:flex sm:items-center sm:px-[23px] md:px-0"><!-- row -->
+      <!-- 同上因為外框 sm:px-[13px] md:px-9，所以覆蓋樣式控制  -->
+      <div class="py-4 sm:py-0 ps-[13px] sm:ps-0"><!-- col -->
+        <!-- logo -->
+        <!-- 1. 查了資料，圖片內容的 alt 比較可以增加 seo 搜尋，但這邊 div 感覺不如改成 h1 ? -->
+        <h1 class="w-20 h-full hover-translate-y md:ps-0">
+          <a href="./index.html">
+            <img src="../assets/images/logo-white.png" alt="logo" />
+          </a>
+        </h1>
+      </div>
+      <!-- 導覽 -->
+      <!-- block 讓縮小視窗後放大點擊 a 連結，但會出現x軸，我在父容器添加 overflow-hidden，不知可不可行 -->
+      <ul class=" flex flex-wrap sm:gap-16 text-white sm:flex-nowrap sm:ml-auto overflow-hidden"><!-- col -->
+        <li class="nav-item">
+          <a href="./product_01.html" class="nav-link">系列鏡框</a>
+        </li>
+        <li class="nav-item">
+          <a href="./store.html" class="nav-link">門市據點</a>
+        </li>
+        <li class="nav-item">
+          <a href="./blog.html" class="nav-link">部落格</a>
+        </li>
+        <li class="nav-item">
+          <a href="./faq.html" class="nav-link">常見問題</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>眼鏡官網</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet" />
+  <!-- 如果用 JS 引入，畫面跳轉會先讀不到 CSS 的問題 -->
+  <link rel="stylesheet" href="../assets/css/tailwind-output.css">
+</head>
+
+<body>
+  <%- include('./layout/header') -%>
+    <!-- banner -->
+    <section class="h-[396px] md:h-[768px] bg-sm-banner md:bg-banner bg-cover bg-center">
+      <!-- 外層容器有設定高度，內層都要撐滿 h-full 才能控制文字 -->
+      <div class="container sm:container-sm h-full px-[13px] md:px-9">
+        <div class="h-full">
+          <ul class="flex h-full flex-col items-end justify-center">
+            <li>
+              <p class="text-primary-Dark md:text-[36px]">
+                Promise-Desert 2020 早春系列
+              </p>
+            </li>
+            <li>
+              <h2 class="text-primary-Dark text-[24px] md:text-[64px] font-bold">
+                看得清，才能看得遠
+              </h2>
+            </li>
+            <li class="mt-[14px]">
+              <a href="../product_01.html"
+                class="text-white bg-primary font-medium pb-2 text-[20px] py-[6px] px-3 block hover-translate-y hover:opacity-75">
+                立即購買
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- 用專業的心，做專業的事 -->
+    <section class="bg-secondary py-10 md:py-20">
+      <div class="container sm:container-sm text-primary-Dark px-[13px] md:px-9">
+        <h2 class="text-[24px] sm:text-[48px] px-13 sm:text-5xl font-bold pb-8 text-center">
+          用專業的心，做專業的事
+        </h2>
+        <!-- 外層 margin 拉回來，不清楚就讓內外層加上框線就可以知道差別 -->
+        <ul class="flex flex-wrap lg:flex-nowrap -mx-3 space-y-8 md:space-y-0">
+          <!-- 每個卡片都距離 12px，外層要用 margin 拉回來-->
+          <li class="flex flex-col items-center w-full md:w-1/2 px-3">
+            <div class="">
+              <img src="../assets/images/home-section2-1.png" alt="money" />
+            </div>
+            <h3 class="text-[24px] font-bold">單一價格</h3>
+            <p class="text-[#000000] ">無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。</p>
+          </li>
+          <li class="flex flex-col items-center w-full md:w-1/2 px-3">
+            <div class="">
+              <img src="../assets/images/home-section2-2.png" alt="time" />
+            </div>
+            <h3 class="text-[24px] font-bold">20 分鐘即可取件</h3>
+            <p class="text-[#000000] ">
+              為了您的寶貴時間著想，以豐富專業知識與技術將結帳到交件的時間縮減至最快
+              20 分鐘即可完成。
+            </p>
+          </li>
+          <li class="flex flex-col items-center w-full md:w-1/2 px-3">
+            <div class="">
+              <img src="../assets/images/home-section2-3.png" alt="love" />
+            </div>
+            <h3 class="text-[24px] font-bold">安心售後服務</h3>
+            <p class="text-[#000000] ">
+              我們提供長達 120
+              天的保固售後服務，不限會員資格皆享有免費深層保養及專業維修服務。
+            </p>
+          </li>
+          <li class="flex flex-col items-center w-full md:w-1/2 px-3">
+            <div class="">
+              <img src="../assets/images/home-sectioin2-4.png" alt="glasse" />
+            </div>
+            <h3 class="text-[24px] font-bold">關於鏡片</h3>
+            <p class="text-[#000000] ">使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 經典系列鏡框 -->
+    <section class="py-10 md:py-20">
+      <div class="container sm:container-sm text-center px-[13px] md:px-9">
+        <h2 class="text-[24px] md:text-[48px] text-primary-Dark font-bold  md:pb-12">經典系列鏡框</h2>
+        <!-- 這邊每個 li 設定寬 1/2 但在 md 時會有兩張圖並排無法垂直單獨一張圖，所以使用 flex-col lg:flex-row 再加上置中解決 -->
+        <ul
+          class="flex flex-wrap flex-col lg:flex-row md:flex-wrap lg:flex-nowrap items-center justify-center text-[48px] text-primary font-black italic -mx-3">
+          <li class="px-3 w-full md:w-1/2 lg:w-1/3">
+            <div class="">
+              <img src="../assets/images/home-section3-1.png" alt="OPTICAL">
+            </div>
+            <h3 class="pt-2 ">OPTICAL</h3>
+          </li>
+          <li class="px-3 w-full md:w-1/2 lg:w-1/3">
+            <div class="">
+              <img src="../assets/images/home-section3-2.png" alt="SUNGLASSES">
+            </div>
+            <h3 class="pt-2 ">SUNGLASSES</h3>
+          </li>
+          <li class="px-3 w-full md:w-1/2 lg:w-1/3">
+            <div class="">
+              <img src="../assets/images/home-section3-3.png" alt="FUNCTIONAL">
+            </div>
+            <h3 class="pt-2 ">FUNCTIONAL</h3>
+          </li>
+        </ul>
+    </section>
+    <!-- 聯名設計鏡框 -->
+    <section class="py-10 md:py-20 bg-sm-index md:lg-index bg-cover bg-center">
+      <div class="container sm:container-sm text-center px-[13px] md:px-9">
+        <h2 class="text-[24px] md:text-[48px] text-white font-bold  md:pb-12">聯名設計鏡框</h2>
+        <ul
+          class="flex flex-wrap  lg:flex-nowrap items-center justify-center text-[48px] text-primary font-black italic -mx-[13px] gap-6 lg:gap-0">
+          <li class="px-[13px] md:px-0 w-full">
+            <div class="">
+              <img src="../assets/images/home-section4-1-sm.png" class="block sm:hidden" alt="DOUBLE A+">
+              <img src="../assets/images/home-section4-1.png" class="hidden sm:block" alt="DOUBLE A+">
+            </div>
+            <div class="bg-white py-2 border">
+              <h3 class="">DOUBLE A+</h3>
+            </div>
+          </li>
+          <li class="px-[13px] md:px-0 w-full ">
+            <div class="">
+              <img src="../assets/images/home-section4-2-sm.png" class="block sm:hidden" alt="YOUTH">
+              <img src="../assets/images/home-section4-2.png" class="hidden sm:block" alt="YOUTH">
+            </div>
+            <div class="bg-white py-2 border">
+              <h3 class="">YOUTH</h3>
+            </div>
+          </li>
+        </ul>
+    </section>
+    <!-- 顧客推薦 -->
+    <section class="py-10 md:py-20">
+      <div class="container sm:container-sm text-primary-Dark px-[13px] md:px-9">
+        <h2 class="text-[24px] sm:text-[48px] sm:text-5xl font-bold pb-6 sm:pb-12 text-center">
+          顧客推薦
+        </h2>
+        <!-- flex flex-wrap md:flex-nowrap -->
+        <ul class="flex flex-wrap lg:flex-nowrap -mx-3 gap-4 sm:gap-0">
+          <li class="flex flex-col w-full sm:w-1/2 px-3 md:mb-4 lg:mb-0">
+            <div class="h-full rounded-custom-top">
+              <img src="../assets/images/home-section5-1.png" class="h-full w-auto" alt="Jessy" />
+            </div>
+            <div
+              class="flex flex-col p-4 h-full border border-t-0 rounded-custom-bootom border-custom-gray shadow-custom-shadow">
+              <h3 class="text-[16px] font-medium pb-2">Jessy</h3>
+              <p class="text-[#000000] text-[16px]">眼鏡品質優良，下次還會想來這邊購買！</p>
+              <time datetime="2021-06-20" class="text-[#707070] text-[14px] pt-[72px]">2021/06/20</time>
+            </div>
+          </li>
+          <li class="flex flex-col w-full sm:w-1/2 px-3 md:mb-4 lg:mb-0">
+            <div class="h-full rounded-custom-top">
+              <img src="../assets/images/home-section5-2.png" class="h-full w-auto" alt="凱倫" />
+            </div>
+            <div
+              class="flex flex-col p-4 h-full border border-t-0 rounded-custom-bootom border-custom-gray shadow-custom-shadow">
+              <h3 class="text-[16px] font-medium pb-2">凱倫</h3>
+              <p class="text-[#000000] text-[16px]">做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！</p>
+              <time datetime="2021-04-18" class="text-[#707070] text-[14px] pt-[72px]">2021/04/18</time>
+            </div>
+          </li>
+          <li class="flex flex-col w-full sm:w-1/2 px-3">
+            <div class="h-full rounded-custom-top">
+              <img src="../assets/images/home-section5-3.png" class="h-full w-auto" alt="悠悠" />
+            </div>
+            <div
+              class="flex flex-col p-4 h-full border border-t-0 rounded-custom-bootom border-custom-gray shadow-custom-shadow">
+              <h3 class="text-[16px] font-medium pb-2">悠悠</h3>
+              <p class="text-[#000000] text-[16px]">謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
+              <time datetime="2020-12-25" class="text-[#707070] text-[14px] pt-[72px]">2020/12/25</time>
+            </div>
+          </li>
+          <li class="flex flex-col w-full sm:w-1/2 px-3">
+            <div class="h-full rounded-custom-top">
+              <img src="../assets/images/home-section5-4.png" class="h-full w-auto" alt="Kyuan" />
+            </div>
+            <div
+              class="flex flex-col p-4 h-full border border-t-0 rounded-custom-bootom border-custom-gray shadow-custom-shadow">
+              <h3 class="text-[16px] font-medium pb-2">Kyuan</h3>
+              <p class="text-[#000000] text-[16px]">服務很好，品質沒有任何問題，非常喜歡。</p>
+              <time datetime="2020-10-31" class="text-[#707070] text-[14px] pt-[72px]">2020/10/31</time>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 聯絡我們 -->
+    <section class="bg-secondary py-10 sm:py-20">
+      <div class="container sm:container-sm px-[13px] w-full sm:w-5/6 lg:w-1/2">
+        <h2 class="text-center text-[24px] sm:text-[48px] font-bold text-primary pb-6">聯絡我們</h2>
+        <p class="pb-6">我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
+        <div class="pb-4">
+          <label for="name" class="pb-2">姓名</label>
+          <input id="name" type="text" name="name" placeholder="陳小明"
+            class="w-full py-[6px] pl-[12px] border border-black bg-transparent" />
+        </div>
+        <div class="pb-4">
+          <label for="phone" class="pb-2">聯絡電話</label>
+          <input id="phone" type="tel" name="phone" placeholder="0912-345-678"
+            class="w-full py-[6px] pl-[12px] border border-black bg-transparent" />
+        </div>
+        <div class="pb-4">
+          <label for="email" class="pb-2">電子郵件</label>
+          <input id="email" type="email" name="email" placeholder="example@email.com"
+            class="w-full py-[6px] pl-[12px] border border-black bg-transparent" />
+        </div>
+        <div class="pb-4">
+          <label for="feedback" class="pb-2">意見反應</label>
+          <textarea id="feedback" type="text" name="feedback" placeholder="請輸入您的意見"
+            class="w-full pt-[6px] pl-[12px] border border-black bg-transparent h-[136px] resize-none"></textarea>
+        </div>
+        <div class="flex pb-6 sm:pb-12">
+          <div>
+            <input type="checkbox" name="agree" id="agree" class=" bg-transparent border border-black mr-1 h-6 w-6  pl-3 pt-[6px]" />
+          </div>
+          <label for="agree">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
+        </div>
+        <div class="pb-10 md:pb-20">
+          <a href="#" class="">
+            <button type="button"
+              class="hover:cursor-pointer block bg-primary py-4 font-bold text-white w-full sm:w-1/2 lg:w-2/3 mx-auto">
+              確認送出
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <%- include('./layout/footer') -%>
+    <script type="module" src="../main.js"></script>
+</body>
+
+</html>
